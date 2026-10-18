@@ -82,6 +82,7 @@ public class pointOfSale {
         System.out.printf("Original price: $%.2f %n", price);
         System.out.printf("Discount: $%.2f %n", discountAmount);
         System.out.printf("Final price: $%.2f %n", finalPrice);
+        System.out.printf("");
         System.out.printf("Thank you for your order");
     }
 }
