@@ -36,17 +36,30 @@ public class pointOfSale {
         if (age <= 17) {
             discount = 0.10;
             System.out.println("You get a 10% discount");
+            System.out.println("");
         }
 
         else if (age >= 65) {
             discount = 0.20;
             System.out.println("You get a 20% discount");
+            System.out.println("");
         }
 
-        else{
+        else {
             System.out.println("You get no discount");
+            System.out.println("");
+            scanner.close();
+            return;
         }
 
+        //Calculate the final price
+        double discountAmount = price * discount;
+        double finalPrice = price - discountAmount;
+
+        //shows the total with the discount.
+        System.out.printf("Original price: $%.2f %n", price);
+        System.out.printf("Discount: $%.2f %n", discountAmount);
+        System.out.printf("Final price: $%.2f %n", finalPrice);
 
     }
 }
