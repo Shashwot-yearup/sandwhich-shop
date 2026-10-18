@@ -15,6 +15,8 @@ public class pointOfSale {
         int sandwich = scanner.nextInt(); // asked the user input
         double price;
 
+
+
         // if else statement to set the price to the user selection.
         if (sandwich == 1)
             price = 5.45;
@@ -24,6 +26,28 @@ public class pointOfSale {
 
         else {
             System.out.println("Not a valid choice");
+            return;
+        }
+
+        // if else statement to ask the user for a loaded sandwich.
+        System.out.println("Would you like your sandwich loaded? (yes/no)");
+        String loaded = scanner.next();
+
+        if (loaded.equalsIgnoreCase("yes")) {
+            if (sandwich == 1)
+                price += 1.00;
+            else
+                price += 1.75;
+            System.out.println("Loaded sandwich selected.");
+            System.out.println("");
+        }
+        else if (loaded.equalsIgnoreCase("no")) {
+            System.out.println("No extra charge.");
+            System.out.println("");
+        }
+        else {
+            System.out.println("Invalid choice. Please enter yes or no.");
+            scanner.close();
             return;
         }
 
@@ -60,6 +84,6 @@ public class pointOfSale {
         System.out.printf("Original price: $%.2f %n", price);
         System.out.printf("Discount: $%.2f %n", discountAmount);
         System.out.printf("Final price: $%.2f %n", finalPrice);
-
+        System.out.printf("Thank you for your order");
     }
 }
