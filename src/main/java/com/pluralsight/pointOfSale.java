@@ -15,8 +15,6 @@ public class pointOfSale {
         int sandwich = scanner.nextInt(); // asked the user input
         double price;
 
-
-
         // if else statement to set the price to the user selection.
         if (sandwich == 1)
             price = 5.45;
